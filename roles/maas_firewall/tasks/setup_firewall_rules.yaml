@@ -53,6 +53,13 @@
     protocol: tcp
     destination_port: 23267
     jump: ACCEPT
+    
+- name: Allow port 5248 tcp
+  ansible.builtin.iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: 23267
+    jump: ACCEPT
 
 - name: Open tcp ports
   ansible.builtin.iptables:
